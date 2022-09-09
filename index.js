@@ -78,9 +78,9 @@ function makeCalculator(calculatorId, callback, options = {}) {
     }
   });
   if (autoSave) {
-    $("form#calculator").submit()
+    $("#calculator").submit()
     console.debug("> AutoSave enabled.");
-    $("form#calculator").on("input", function (event) {
+    $("#calculator").on("input", function (event) {
       event.preventDefault();
       event.currentTarget.requestSubmit();
     });
