@@ -67,6 +67,7 @@ function makeCalculator(calculatorId, callback, options = {}) {
   for (const [key, value] of params.entries()) {
     $(`form#calculator input[name=${key}]`).val(value);
   }
+  $("#calculator").trigger("input");
   $("#calculator").on("submit", function (event) {
     event.preventDefault();
     var [input, output] = getFormInputOutput(event);
